@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>FarmaCloud</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+      background-color: #f5f5f5;
+    }
+    .produto {
+      background: white;
+      padding: 15px;
+      margin: 10px auto;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>💊 FarmaCloud</h1>
+  <h3>Bem-vindo à farmácia na nuvem!</h3>
+
+  <p>Catálogo de produtos:</p>
+
+  <div id="lista"></div>
+
+  <script>
+    fetch("produtos.json")
+      .then(res => res.json())
+      .then(data => {
+        const area = document.getElementById("lista");
+        data.produtos.forEach(p => {
+          area.innerHTML += `
+            <div class="produto">
+              <strong>${p.nome}</strong><br>
+              Preço: R$ ${p.preco}<br>
+              Categoria: ${p.categoria}
+            </div>
+          `;
+        });
+      });
+  </script>
+
+</body>
+</html>
