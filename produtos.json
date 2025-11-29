@@ -1,0 +1,19 @@
+{
+  "produtos": [
+    {
+      "nome": "Paracetamol 750mg",
+      "preco": 12.50,
+      "categoria": "Medicamento"
+    },
+    {
+      "nome": "Dipirona 500mg",
+      "preco": 8.90,
+      "categoria": "Medicamento"
+    },
+    {
+      "nome": "Protetor Solar FPS 50",
+      "preco": 34.99,
+      "categoria": "Higiene"
+    }
+  ]
+}
